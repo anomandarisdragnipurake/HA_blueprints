@@ -137,7 +137,7 @@ blueprint:
             - label: "Long:      e.g A Person was detected on the Side camera in the driveway."
               value: "A {{ label }} {{ 'is loitering' if loitering else 'was detected' }} on the {{ camera_name }} camera{% if entered_zones %} in the {{ entered_zones | join(', ') | replace('_',' ') }}{% endif %}."
             - label: "Long with a timestamp HH:MM"
-              value: "A {{ label }} {{ 'is loitering' if loitering else 'was detected' }} on the {{ camera_name }} camera{{% if entered_zones %} in the {{ entered_zones | join(', ') | replace('_',' ') }}{% endif %} at {{event['after']['start_time']|timestamp_custom('%H:%M')}}."
+              value: "A {{ label }} {{ 'is loitering' if loitering else 'was detected' }} on the {{ camera_name }} camera{% if entered_zones %} in the {{ entered_zones | join(', ') | replace('_',' ') }}{% endif %} at {{event['after']['start_time']|timestamp_custom('%H:%M')}}."
           custom_value: true
     subtitle:
       name: Subtitle
